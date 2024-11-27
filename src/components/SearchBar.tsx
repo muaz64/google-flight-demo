@@ -39,6 +39,7 @@ export default function SearchBar() {
   const [destinationSkyId, setDestinationSkyId] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
+
   // Snackbar state for error handling
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
@@ -152,7 +153,7 @@ export default function SearchBar() {
 
   return (
     <>
-      <div className="container mx-auto flex justify-center items-center p-2 md:p-0">
+      <div className="container mx-auto mt-6 flex justify-center items-center p-2 md:p-0">
         <div className="border border-gray-300 p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg">
           <div className="flex flex-row md:flex-row">
             <FormControl variant="standard" sx={{ m: 1, minWidth: 150 }}>
@@ -174,7 +175,7 @@ export default function SearchBar() {
                 {/* <MenuItem value={30}>Thirty</MenuItem> */}
               </Select>
             </FormControl>
-            <div className="pt-6 md:pt-0 md:pl-6">
+            <div className="pt-6 md:pt-0 md:pl-6 ">
               <FormControl variant="standard" sx={{ m: 1, minWidth: 24 }}>
                 <InputLabel id="demo-simple-select-standard-label">
                   <PersonOutline />{" "}
@@ -186,12 +187,11 @@ export default function SearchBar() {
                   onChange={(e) => setPassenger(Number(e.target.value))}
                   label="Passenger"
                 >
-                  <MenuItem value={1}>
-                    <em>1</em>
-                  </MenuItem>
+                  <MenuItem value={1}>1</MenuItem>
                   <MenuItem value={2}>2</MenuItem>
                   <MenuItem value={3}>3</MenuItem>
-                  {/* <MenuItem value={3}>4</MenuItem> */}
+                  <MenuItem value={4}>4</MenuItem>
+                  <MenuItem value={5}>5</MenuItem>
                 </Select>
               </FormControl>
             </div>
@@ -297,7 +297,7 @@ export default function SearchBar() {
           className="flex justify-items-center px-3 gap-2 p-2 border w-28 rounded-full bg-blue-500 text-white"
         >
           <Search />
-          <p className="my-auto">{isLoading ? "Searching..." : "Search"}</p>
+          <p className="my-auto">{isLoading ? "Searching..." : "EXplore"}</p>
         </button>
         {/* Snackbar for error handling */}
         <Snackbar
