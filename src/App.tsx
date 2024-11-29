@@ -8,7 +8,7 @@ import SearchBar from "./components/SearchBar";
 function App() {
   return (
     <div className="overflow-hidden">
-      <img className="p-14" src={hero} alt="hero-image" />
+      <img className="pt-14" src={hero} alt="hero-image" />
       <div className="m-auto my-15">
         <h1 className="text-center font-semibold text-6xl mt-[-50px] lg:mt-[-150px]">Flights</h1>
       </div>

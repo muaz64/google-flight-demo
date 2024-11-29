@@ -15,8 +15,13 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
+// import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import DraftsIcon from '@mui/icons-material/Drafts';
+import HomeIcon from '@mui/icons-material/Home';
+import BackpackIcon from '@mui/icons-material/Backpack';
+import TravelExploreIcon from '@mui/icons-material/TravelExplore';
+import FlightIcon from '@mui/icons-material/Flight';
 // import Toolbar from "@mui/material/Toolbar";
 
 export const Navbar = () => {
@@ -29,24 +34,26 @@ export const Navbar = () => {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+      {["Home","Travel", "Explore", "Flights"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {index === 0 ? <HomeIcon /> : index === 1 ? <BackpackIcon /> : index === 2 ? <TravelExploreIcon /> : <FlightIcon />}
+
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
+       
       </List>
       <Divider />
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
+      {[ "Send email", "Drafts"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ?  <MailIcon /> : <DraftsIcon/>}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>

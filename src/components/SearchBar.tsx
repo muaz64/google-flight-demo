@@ -218,7 +218,7 @@ export default function SearchBar() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="grid grid-cols-2 gap-2 border border-gray-200 p-2 rounded">
+            <div className="grid grid-cols-2 gap-2 border border-gray-200 p-2 rounded-full">
               <div className="flex rounded bg-none items-center p-2 ">
                 <Autocomplete
                   id="manageable-states-demo"
@@ -266,7 +266,7 @@ export default function SearchBar() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-2 border border-gray-200 p-2 rounded">
+            <div className="grid grid-cols-2 gap-2 border border-gray-200 p-2 rounded-full">
               <div className="flex rounded bg-none items-center p-2 ">
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DemoContainer components={["DatePicker", "DatePicker"]}>
