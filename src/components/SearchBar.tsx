@@ -266,7 +266,7 @@ export default function SearchBar() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-2 border border-gray-200 p-2 rounded-full">
+            <div className="grid grid-cols-2 gap-2 border border-gray-200 p-3 rounded-full">
               <div className="flex rounded bg-none items-center p-2 ">
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DemoContainer components={["DatePicker", "DatePicker"]}>

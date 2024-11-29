@@ -19,7 +19,7 @@ export default function FlightResultsAccordion({ flights }: { flights: any }) {
     return (
       <div>
         <img className="m-auto" src={Noflights} alt="no-flights" />
-        <h1 className="font-semibold text-2xl lg:text-4xl text-center">
+        <h1 className="font-semibold text-2xl lg:text-4xl text-center mb-5">
           No flights available
         </h1>
       </div>
