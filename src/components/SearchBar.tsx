@@ -153,7 +153,7 @@ export default function SearchBar() {
 
   return (
     <>
-      <div className="container mx-auto mt-6 flex justify-center items-center p-2 md:p-0">
+      <div className="container mx-auto mt-10 flex justify-center items-center p-2 md:p-0">
         <div className="border border-gray-300 p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg">
           <div className="flex flex-row md:flex-row">
             <FormControl variant="standard" sx={{ m: 1, minWidth: 150 }}>
